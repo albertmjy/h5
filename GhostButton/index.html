@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8" />
+	<title>Ghost Button</title>
+	<link rel="stylesheet" type="text/css" href="sty.css" />
+	<script src="jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+
+	<div class="box">
+		<div class="link link-miss">
+			<span class="icon"></span>
+			<a href="#" class="button" data-title="My Mission is clear">
+				<span class="line line-top"></span>
+				<span class="line line-left"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				MISSION
+			</a>
+		</div>
+		<div class="link link-play">
+			<span class="icon"></span>
+			<a href="#" class="button" data-title="The is my playground">
+				<span class="line line-top"></span>
+				<span class="line line-left"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				PLAY
+			</a>
+		</div>
+		<div class="link link-touch">
+			<span class="icon"></span>
+			<a href="#" class="button" data-title="Let's do something together">
+				<span class="line line-top"></span>
+				<span class="line line-left"></span>
+				<span class="line line-right"></span>
+				<span class="line line-bottom"></span>
+				TOUCH
+			</a>
+		</div>
+
+		<div class="tip">
+			<em></em>
+			<span></span>
+		</div>
+
+		<script type="text/javascript">
+		$(function(){
+			$(".link .button").hover(function(){
+				var title = $(this).attr("data-title");
+				$(".tip em").text(title);
+				var pos = $(this).offset().left;
+				var dis = ($(".tip").outerWidth() - $(this).outerWidth())/2;
+				var f = pos - dis;
+				$(".tip").css({"left":f+"px"}).animate({"top":195, "opacity":1}, 300);
+			}, function(){
+				$(".tip").animate({"top":160, "opacity":0}, 300)
+			})
+		})
+		</script>
+	</div>
+</body>
+</html>

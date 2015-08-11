@@ -1,0 +1,31 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.box img{
+	height: 5000px;
+	width: 800px;
+}
+
+.box {
+	width: 800px;
+	margin: 50px auto;
+}
+
+.btn {
+	width: 40px;
+	height: 80px;
+	position: fixed;
+	bottom: 30px;
+	background: red;
+	left: 50%;
+	margin-left: 400px;
+
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+	background: green;
+}
